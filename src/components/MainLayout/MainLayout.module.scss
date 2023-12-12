@@ -1,0 +1,11 @@
+.layout{
+    width: clamp(320px, 80%, 1400px);
+    margin-block: 2rem;
+    padding: 0 0 1.6rem 0;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    box-shadow: 0 12px 27px #5B77861A,  0 49px 49px #5B77861A;
+    section{
+        width: 100%;
+    }
+}

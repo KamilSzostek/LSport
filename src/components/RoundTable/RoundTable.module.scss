@@ -1,0 +1,77 @@
+.roundTable {
+    width: calc(100% - 3.2rem);
+    margin: 1.6rem;
+
+    thead {
+        tr {
+            background-color: var(--secondary-color);
+
+            th {
+                padding: .8rem 1.6rem;
+                border-radius: .35em;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: left;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    tbody {
+        width: 100%;
+
+        tr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: .8rem 1.6rem;
+            margin: .5em;
+            border-bottom: 1px solid #00000019;
+
+            td {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            .date {
+                font-weight: 400;
+                opacity: .5;
+            }
+
+            .teams {
+                flex-grow: 1;
+                margin-left: 1.6rem;
+                padding-inline: .8rem;
+                border-left: 3px solid #61AEE4;
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+                img {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+            }
+            .score{
+                margin-inline: 4em;
+                opacity: .5;
+            }
+            .controls{
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+                div{
+                    padding: .8rem 1.6rem;
+                    border: 1.5px solid #D5E0E8;
+                    border-radius: .8rem;
+                }
+            }
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+    }
+}
