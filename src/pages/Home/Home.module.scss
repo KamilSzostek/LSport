@@ -16,3 +16,57 @@
          }
      }
  }
+ .pagination{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4em;
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #0000007c;
+        transition: .5s;
+        cursor: pointer;
+        &:hover{
+            color: #333;
+        }
+        &:disabled{
+            opacity: 0;
+            cursor: default;
+        }
+        svg{
+            width: 6px;
+            height: 12px;
+            color: #FC5C17;
+        }
+    }
+ }
+ .error{
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    p{
+        opacity: .8;
+    }
+    button{
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        svg{
+            width: 35px;
+            height: 35px;
+            transition: transform .7s;
+        }
+        &:hover{
+            svg{
+                transform: rotate(-55deg);
+            }
+        }
+    }
+ }

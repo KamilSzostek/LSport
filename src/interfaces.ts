@@ -9,3 +9,13 @@ export interface IGame {
     homeScore: number
     awayScore: number
 }
+export interface IScore{
+    teamId: number
+    teamName: string
+    teamImage: string
+    games: number
+    goalsConceded: number
+    goalsScored: number
+    goalsRatio: number
+    points: number
+}

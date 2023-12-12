@@ -1,21 +1,7 @@
+@import '../../mixins/mixins';
+
 .roundTable {
-    width: calc(100% - 3.2rem);
-    margin: 1.6rem;
-
-    thead {
-        tr {
-            background-color: var(--secondary-color);
-
-            th {
-                padding: .8rem 1.6rem;
-                border-radius: .35em;
-                font-size: 1.2rem;
-                font-weight: 500;
-                text-align: left;
-                text-transform: uppercase;
-            }
-        }
-    }
+    @include baseTable;
 
     tbody {
         width: 100%;
@@ -24,19 +10,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             gap: 1rem;
-            padding: .8rem 1.6rem;
-            margin: .5em;
-            border-bottom: 1px solid #00000019;
-
-            td {
-                font-size: 1.6rem;
-                font-weight: 500;
-            }
 
             .date {
+                width: 100%;
                 font-weight: 400;
                 opacity: .5;
+                text-align: center;
+                text-wrap: nowrap;
             }
 
             .teams {
@@ -44,34 +26,90 @@
                 margin-left: 1.6rem;
                 padding-inline: .8rem;
                 border-left: 3px solid #61AEE4;
-                div{
+
+                div {
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
                     gap: 12px;
                 }
+
                 img {
                     width: 1.6rem;
                     height: 1.6rem;
                 }
             }
-            .score{
-                margin-inline: 4em;
+
+            .score {
+                display: none;
+                margin-inline: 1em;
                 opacity: .5;
             }
-            .controls{
+
+            .controls {
+                width: 100%;
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 gap: .8rem;
-                div{
+
+                div {
                     padding: .8rem 1.6rem;
                     border: 1.5px solid #D5E0E8;
                     border-radius: .8rem;
                 }
+                img{
+                    cursor: pointer;
+                }
             }
         }
+    }
+}
 
-        tr:last-child {
-            border-bottom: none;
+@media (min-width: 768px) {
+    .roundTable {
+        tbody {
+            tr {
+                flex-wrap: nowrap;
+
+                .date {
+                    max-width: 200px;
+                    text-align: left;
+                }
+
+                .teams {
+                    min-width: 195px;
+
+                    div {
+                        justify-content: start;
+
+                        .goals {
+                            display: none;
+                        }
+                    }
+                }
+
+                .score {
+                    display: table-cell;
+                }
+
+                .controls {
+                    width: auto;
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .roundTable {
+        tbody {
+            tr {
+                .score {
+                    margin-inline: 5rem;
+                }
+            }
         }
     }
 }

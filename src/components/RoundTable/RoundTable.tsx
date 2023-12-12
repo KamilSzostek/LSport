@@ -15,10 +15,12 @@ const RoundTable: FC<IRoundTableProps> = ({ round }) => {
             <div>
                 <img src={row.homeTeamImage} alt={row.homeTeam} />
                 <span>{row.homeTeam}</span>
+                <span className={styles.goals}>{row.homeScore}</span>
             </div>
             <div>
                 <img src={row.awayTeamImage} alt={row.awayTeam} />
                 <span>{row.awayTeam}</span>
+                <span className={styles.goals}>{row.awayScore}</span>
             </div>
         </td>
         <td className={styles.score}>
@@ -28,7 +30,7 @@ const RoundTable: FC<IRoundTableProps> = ({ round }) => {
         <td className={styles.controls}>
             <img src={Desktop} alt="ikona pulpitu" width={40} height={40} />
             <div>
-                <LinkButton buttonText='Szczegóły' />
+                <LinkButton specialClass={styles.desktopBtn} buttonText='Szczegóły' />
             </div>
         </td>
     </tr>))

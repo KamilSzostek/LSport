@@ -1,7 +1,13 @@
-.link{
+.link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #000;
     font-size: 1.6rem;
-    svg{
+    transition: .5s;
+
+    svg {
         margin-left: .15em;
         width: 16px;
         height: 16px;
@@ -9,5 +15,15 @@
         border: 1.5px solid #FC5C17;
         border-radius: 50%;
         color: #fff;
+        transition: .5s;
+    }
+
+    &:hover {
+        color: #000000a8;
+        svg {
+            color: #FC5C17;
+            background-color: #fff;
+            transform: scale(1.2) rotate(45deg);
+        }
     }
 }

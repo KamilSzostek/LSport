@@ -1,0 +1,46 @@
+@mixin baseTable {
+    width: calc(100% - 3.2rem);
+    margin: 1.6rem;
+    border-spacing: 0;
+    thead {
+        background-color: var(--secondary-color);
+
+        tr {
+            
+            th {
+                padding: .8rem 1.6rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            th:first-child{
+                border-top-left-radius: .35em;
+                border-bottom-left-radius: .35em;
+            }
+            th:last-child{
+                border-top-right-radius: .35em;
+                border-bottom-right-radius: .35em;
+            }
+        }
+    }
+
+    tbody {
+        width: 100%;
+
+        tr {
+            padding: .8rem 1.6rem;
+            margin: .5em;
+            border-bottom: 1px solid #00000019;
+
+            td {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            tr:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import '../../mixins/mixins';
+
+.score {
+    @include baseTable;
+    table-layout: fixed;
+    thead {
+        tr {
+            th {
+                width: 20%;
+            }
+            th:nth-child(2){
+                width: 60%;
+            }
+
+            th:nth-child(3),
+            th:nth-child(4),
+            th:nth-child(5) {
+                display: none;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                border-bottom: 1px solid #00000019;
+                padding: 1.6rem;
+                font-size: 1.4rem;
+            }
+            
+            .position {
+                width: 5%;
+                margin-right: 5rem;
+
+                div {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background-color: #A7A7A7;
+                    border-radius: .6rem;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+
+            .name {
+                display: flex;
+                align-items: center;
+            }
+
+            .games,
+            .goals,
+            .ratio {
+                display: none;
+            }
+
+            .points {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    tfoot {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        margin: 1.6rem 3.2rem;
+
+        tr {
+            td {
+                div {
+                    display: flex;
+                    font-size: 1.2rem;
+
+                    span {
+                        width: 320px;
+                    }
+
+                    .colorBox {
+                        min-width: 16px;
+                        height: 1.6rem;
+                        margin-right: 1.6rem;
+                        background-color: var(--primary-color);
+                        border-radius: .4em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.color1 {
+    background-color: var(--primary-color) !important;
+}
+
+.color2 {
+    background-color: #C82D2D !important;
+}
+
+.color3 {
+    background-color: #FF5F5F !important;
+}
+
+@media (min-width: 768px) {
+    .score {
+        thead {
+            tr {
+                th{
+                    width: 15%;
+                }
+                th:nth-child(3),
+                th:nth-child(4),
+                th:nth-child(5) {
+                    display: table-cell;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+
+                .games,
+                .goals,
+                .ratio {
+                    display: table-cell;
+                }
+            }
+        }
+    }
+}
